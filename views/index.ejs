@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>REGISTER AS A USER</title>
+</head>
+<body>
+    <section>
+        <form action="/registerUser"  method="POST">
+            <h2>ENTER YOUR DETAILS BELOW</h2>
+            <input type="text" placeholder="ENTER YOUR FIRSTNAME" name="firstname">
+            <input type="text" placeholder="ENTER YOUR LASTNAME" name="lastname">
+            <input type="email" placeholder="ENTER YOUR EMAIL" name="email">
+            <input type="text" placeholder="ENTER YOUR PHONE NUMBER" name="phoneNumber">
+            <input type="date" name="date">
+            <button type="submit">REGISTER</button>
+            <button type="button" id="updateButton">UPDATE USER</button>
+        </form>
+        <h2>VIEW USERS DETAILS</h2>
+        
+        <% for(let i = 0; i < info.length; i++) {%>
+        <h2>I,m a User</h2>
+        <h3>NAME : <%= info[i].firstname %></h3>
+        <h3>EMAIL : <%= info[i].email %> </h3>
+        <h3>PHONE NUMBER : <%= info[i].phoneNumber %> </h3>
+
+        <% } %>
+    </section>
+    
+
+    <!-- SHOWING INFORMATION TO THE USER -->
+
+
+    <!-- <% for(let i = 0; i < info.length; i++) {%>
+        <li>
+            <span><%= info[i].firstname %></span>
+            <span><%= info[i].lastname%></span>
+            <span><%= info[i].email %></span>
+            <span><%= info[i].phoneNumber %></span>
+            <span><%= info[i].date %></span>
+        </li>
+    <%  } %> -->
+    <script type="text/javascript" src="/main.js"></script>
+</body>
+</html>
